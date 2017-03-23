@@ -1,4 +1,4 @@
-var app = require('./app')
+var app = require('./app').app
 
 // load modules
 require('./http')(app)
