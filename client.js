@@ -3,7 +3,7 @@ var Gun = require('gun')
 var gun = Gun(['http://localhost:3000/gun'])
 
 var data = gun.get('data')
-data.path('message').on(msg => {
+data.path('message').map().on(msg => {
   var date = new Date()
-  debug(`${date.toString()} Message recieved ${JSON.stringify(msg, null, 3)}`)
+  debug(`${date.toString()} Message recieved ${JSON.stringify(msg.test, null, 3)}`)
 })
