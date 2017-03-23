@@ -1,9 +1,9 @@
 var Gun = require('gun')
-var app = require('./app')
+var server = require('./app').server
 
 var gun = Gun({
   file: './data.json',
-  web: app
+  web: server
 })
 
 module.exports = gun
