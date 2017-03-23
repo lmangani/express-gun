@@ -1,5 +1,6 @@
 var express = require('express')
 var debug = require('debug')('express-gun:routes')
+var Gun = require('gun')
 var router = express.Router()
 
 var db = require('./db')
@@ -14,5 +15,6 @@ router.get('/', (req, res) => {
 })
 
 module.exports = app => {
+  app.use(Gun.serve)
   app.use('/', router)
 }
