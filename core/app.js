@@ -1,4 +1,9 @@
 var express = require('express')
-var app = express();
+var debug = require('debug')('express-gun:server')
+var app = express()
+var port = process.env.PORT || 3000
 
-module.exports = app
+var server = app.listen(port) // eslint-disable-line
+debug(`Listening on tcp://localhost:${port}`)
+
+module.exports = { app, server }
