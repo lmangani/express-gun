@@ -4,5 +4,6 @@ var gun = Gun(['http://localhost:3000/gun'])
 
 var data = gun.get('data')
 data.path('message').on(msg => {
-  debug(`Message recieved ${JSON.stringify(msg, null, 3)}`)
+  var date = new Date()
+  debug(`${date.toString()} Message recieved ${JSON.stringify(msg, null, 3)}`)
 })

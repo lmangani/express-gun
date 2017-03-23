@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node app",
-    "start:dev": "DEBUG=* nodemon app"
+    "start:dev": "DEBUG=* nodemon app",
+    "start:client": "DEBUG=* node client"
   },
   "dependencies": {
     "debug": "^2.6.3",
