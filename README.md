@@ -7,7 +7,8 @@ Simple express application which exposes itself as a GunDB peer whilst also incl
 ### STORE
 ##### POST
 ```
-curl-X POST -H "Content-type: application/json" -d '{"test":"5555"}' http://127.0.0.1:3000/api/set/new
+curl-X POST -H "Content-type: application/json" \
+-d '{"test":"5555"}' http://127.0.0.1:3000/api/set/new
 ```
 ##### GET
 ```
